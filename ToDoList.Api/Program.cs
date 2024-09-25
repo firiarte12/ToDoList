@@ -2,12 +2,11 @@ using ToDoList.Shared.Core;
 using ToDoList.Application;
 using ToDoList.Infrastructure;
 using ToDoList.Api.Exceptions;
+using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 EngineContext.Create();
-
-
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -27,6 +26,8 @@ builder.Services.AddApplicationServices(builder.Configuration);
 builder.Services.AddInfrastructureServices(builder.Configuration);
 #endregion
 
+//CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
+//CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("en-US");
 
 builder.Services.AddSwaggerGen();
 

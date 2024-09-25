@@ -8,5 +8,5 @@ namespace ToDoList.Domain.Entity;
 
 public class BaseEntity
 {
-    public Guid id { get; set; }
+    //public Guid id { get; set; }
 }

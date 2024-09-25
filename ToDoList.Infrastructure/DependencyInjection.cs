@@ -25,7 +25,7 @@ public static class DependencyInjection
 
         services.AddTransient<IDbContextFactory, ApplicationDbContextFactory>(s =>
         {
-            //var connectionString = configuration.GetSection("ConnectionStrings:SQLConnection").Value;
+            var connectionString = configuration.GetSection("ConnectionStrings:SQLConnection").Value;
             var options = new DbContextOptionsBuilder<ApplicationDbContext>().UseSqlServer(
                 connectionString,
                 b =>
